@@ -1,3 +1,6 @@
+var x = 1;
+
 function something (){
-        alert('Hello everyone');
-}
+        alert(x);
+        x += 1;
+ }
