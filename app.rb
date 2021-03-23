@@ -17,3 +17,6 @@ end
 get'/about' do
 	erb :about
 end
+get '/something' do
+	erb :something
+  end
