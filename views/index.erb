@@ -3,19 +3,52 @@
 <h3>We sell only for Bitcoins*</h3>
 <h6>* 10000 BTC is the minimum order</h6>
 
-<button class="btn btn-primary btn-lg" onclick="something()">Click the Button!</button>
-<button class="btn btn-red btn-lg" onclick="reset()">Reset</button>
+<style type="text/css"> 
+h2, h3, h6 {
+    text-align:center;
+}
+h3{
+    font-size: 25px;
+}
+h6 {
+    color: grey;
+    font-size: 12px;
+}
+img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+</style>
+
+<div class="d-flex justify-content-end">    
+    <button class="btn btn-primary btn-lg" onclick="something()">Click the Button!</button>
+    <button class="btn btn-outline-danger btn-lg" onclick="reset()">Reset</button>
+</div>
 <h1>Here is our pizza!</h1>
 <div class="container">
-    <div class="row">
-        <div class="col" style="background-color: lightblue;">
-            <p>1/3</p>            
-        </div>
+    <div class="row">        
         <div class="col-9">
             2/3
-            <%# <% @products.each |product| do%>
-                <%# <img src="<%= product.path_to_image%>"> 
-            <%# <% end %> 
+             <div class="d-flex flex-row">
+            <% @products.each do |product| %>
+               
+                    <div id="pizza<%= product.id %>" class="col-3" style="margin-right: 60px;">
+                        <img src="<%= product.path_to_image %>">
+                        <h1><%= product.title %></h1>                        
+                        <p><%= product.description %></p>
+                        <h3>Price: <%= product.price %> BTC</h3>
+                    </div>  
+            <% end %>       
+            </div>      
+        </div>
+        <div class="col" style="border: 1px solid blue;">
+            <p>1/3</p>   
+            <table class="table table-hover">
+                <tr><td><a href="#pizza1" class="btn btn-outline-primary">first element</a></td></tr>
+                <tr><td><a href="#pizza2" class="btn btn-outline-primary">second element</a></td></tr>
+                <tr><td><a href="#pizza3" class="btn btn-outline-primary">third element</a></td></tr>
+            </table>                   
         </div>
     </div>
 </div>
