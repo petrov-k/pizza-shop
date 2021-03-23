@@ -10,7 +10,10 @@ class Product < ActiveRecord::Base
 
 end
 
-get '/' do
+
+
+get '/' do	
+	@products = Product.order('id DESC')
 	erb :index			
 end
 
