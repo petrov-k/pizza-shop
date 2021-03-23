@@ -9,6 +9,11 @@ function something(){
         alert(x);        
 }
 
+function reset(){
+        window.localStorage.removeItem('aaa');
+        window.localStorage.removeItem('bbb');
+}
+
 function more() {
         alert('more bl**t');
 }
