@@ -6,8 +6,8 @@ require 'sinatra/activerecord'
 
 set :database, {adapter: "sqlite3", database: "pizza.db"}
 
-class Product < Application::Base
-	
+class Product < ActiveRecord::Base
+
 end
 
 get '/' do
