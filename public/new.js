@@ -17,3 +17,6 @@ function reset(){
 function more() {
         alert('more bl**t');
 }
+function add_to_cart(){
+        alert('You added pizza to the cart successfully');
+}
