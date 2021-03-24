@@ -33,7 +33,7 @@ img {
              <div class="d-flex flex-row">
             <% @products.each do |product| %>
                
-                    <div id="pizza<%= product.id %>" class="col-3" style="margin-right: 60px;">
+                    <div id="pizza<%= product.id %>" class="col" style="margin-right: 60px;">
                         <img src="<%= product.path_to_image %>">
                         <h1><%= product.title %></h1>                        
                         <p><%= product.description %></p>
