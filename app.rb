@@ -21,4 +21,8 @@ end
 
 get '/something' do
 	erb :something
-  end
+end
+
+post "/cart" do
+	erb "Hello"
+end
