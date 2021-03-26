@@ -24,6 +24,7 @@ function add_to_cart(id){
         window.localStorage.setItem(key, x);
 
         update_orders_input();
+        update_orders_button();
         // for(var i=0, len=localStorage.length; i<len; i++) {
         //         var key = localStorage.key(i);
         //         var value = localStorage[key];
@@ -58,4 +59,9 @@ function cart_get_orders(){
              }
         }
         return orders;
+}
+
+function update_orders_button(){
+        var text = 'Cart (' + count_cart() + ')';
+        $('#orders_button').val(text);
 }
