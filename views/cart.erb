@@ -1,1 +1,42 @@
+<script>
+    $(function() {				
+                // orders_for_table(0);
+                // orders_for_table(1);
+                // pizza_table();
+                table_orders(0);
+                table_orders(1);
+                table_orders(2);
+                
+	});
+</script>
+
+
 <h2>Hello</h2>
+
+
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Product</th>
+      <th scope="col">Amount</th>     
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>pizza 1</td>
+      <td><input id="pizza1_amount" class="form-control me-2" type="text" name="table_amount" value="" /></td>      
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>pizza 2</td>
+      <td><input id="pizza2_amount" class="form-control me-2" type="text" name="table_amount" value="" /></td>       
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>pizza 3</td>  
+      <td><input id="pizza3_amount" class="form-control me-2" type="text" name="table_amount" value="" /></td>        
+    </tr>
+  </tbody>
+</table>
