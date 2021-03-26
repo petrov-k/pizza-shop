@@ -48,9 +48,9 @@ function cart_get_orders(){
         for(var i=0; i<window.localStorage.length; i++) {
              var key = window.localStorage.key(i);
              var value = window.localStorage.getItem(key);   
-             orders += key + '=' + value + ',';
+             
              if(key.indexOf('product_') == 0){
-                orders += key + '=' + value + ',';
+                orders += 'pizza'+(i+1)+ '=' + value + ', ';
              }
         }
         return orders;
@@ -65,14 +65,16 @@ function update_orders_button(){
         $('#orders_button').val(text);
 }
 
-
-
 function table_orders(z){
         var orders = '';
         var key = window.localStorage.key(z);
         var value = window.localStorage.getItem(key);                          
         orders += value;
         $('#pizza'+(z+1)+'_amount').val(orders);             
+}
+function update_order_input(){
+        var orders = cart_get_orders();
+        $('#products_order_input').val(orders);
 }
 
 
